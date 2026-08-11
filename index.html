@@ -14,9 +14,11 @@
 
 <body class=>
     <header>
-        <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary nav1 ">
+        <nav class="navbar navbar-expand-lg nav1" style="background-color: rgb(193, 216, 157);">
             <div class="container-fluid">
-                <a class="navbar-brand"><b>Project Dungeon</b></a>
+                <a class="navbar-brand" href="#">
+                    <img src="assets/Logo2.png" alt="logo" width="100em" height="100em" class="d-inline-block align-text-top">
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg"
                     aria-label="Toggle navigation">
@@ -47,17 +49,20 @@
                 </div>
             </div>
         </nav>
-        <div style="margin-top: 4em;" class="container instrucciones">
+        <div style="margin-top: 1em;" class="container instrucciones">
             <h4><i>Bienvenido a Dungeon Helper, para empezar, suba una imagen: </h4></p>     
         </div>
         <div class="container instrucciones">
-            <button type="button" class="btn btn-primary" style="margin: 3%;">Subir archivo</button>
+            <button type="button" class="btn btn-outline-success" style="margin: 3%;"><b>Subir archivo</b></button>
+        </div>
+        <div class="container instrucciones">
+            <p>Arrastre el ícono hasta el punto deseado en el mapa. Luego, presione el ícono para agregar información</p>
         </div>
     </header>
     <main> 
         <div class="map-frame container-sm">
             <div class="map container-sm">
-                <img src="assets/map-b.png" alt="uploaded-map">
+                <img src="assets/dungeon-vert.jpg" alt="uploaded-map">
             </div>
         </div>
         <div class="container" style="margin-top: 2%;">
