@@ -64,11 +64,11 @@
         </div>
         <div style="display: flex; justify-content: space-evenly; margin-bottom: 2rem;">
             <div class="toolbar">
-                <span><a href="" class="icon" data-bs-toggle="modal" data-bs-target="#notaCombate">⚔️</a></span>
-                <span><a href="" class="icon" data-bs-toggle="modal" data-bs-target="#notaLoot">💰</a></span>
-                <span><a href="" class="icon" data-bs-toggle="modal" data-bs-target="#notaNPC">🙍‍♂️</a></span>
-                <span><a href="" class="icon" data-bs-toggle="modal" data-bs-target="#notaTrampa">🪤</a></span>
-                <span><a href="" class="icon" data-bs-toggle="modal" data-bs-target="#notaModal">📝</a></span>
+                <span><a href="" class="icon" data-bs-toggle="modal" data-bs-target="#modalCombate">⚔️</a></span>
+                <span><a href="" class="icon" data-bs-toggle="modal" data-bs-target="#modalLoot">💰</a></span>
+                <span><a href="" class="icon" data-bs-toggle="modal" data-bs-target="#modalNPC">🙍‍♂️</a></span>
+                <span><a href="" class="icon" data-bs-toggle="modal" data-bs-target="#modalTrampa">🪤</a></span>
+                <span><a href="" class="icon" data-bs-toggle="modal" data-bs-target="#modalNota">📝</a></span>
             </div>
         </div>
         <div class="map-frame container-sm">
@@ -88,7 +88,7 @@
 
     <!-- MODAL NOTAS------------------------------------>
 
-    <div class="modal fade" id="notaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modalNota" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -112,7 +112,7 @@
 
     <!-- MODAL ENCUENTRO------------------------------------>
 
-    <div class="modal fade" id="notaCombate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modalCombate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -120,12 +120,14 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <input type="text" style="width: 100%; margin-bottom: 1em;" class="text-break" placeholder="Título del Combate">
-                    <input type="text" style="margin-bottom: 1em;" class="text-break" placeholder="Personaje">
-                    <input type="text" style="margin-bottom: 1em;" class="text-break" placeholder="PG máx.">
-                    <input type="text" style="margin-bottom: 1em;" class="text-break" placeholder="PG actuales">
-                    <input type="text" style="margin-bottom: 1em;" class="text-break" placeholder="Título del Combate">
-                    <textarea type="text" style="field-sizing: content; width: 100%; margin-bottom: 1em; min-height: 50px; max-height: 200px;" class="text-break" placeholder="Descripción"></textarea>
+                    <input type="text" style="width: 100%; margin-bottom: 1em;" placeholder="Título del Combate">
+                    <div class="modalCombate">
+                    <input type="text" style="min-width: 10px; margin-bottom: 1em;" placeholder="Personaje">
+                    <input type="number" style="margin-bottom: 1em;" class="text-break" placeholder="PG actuales">
+                    <input type="number" style="margin-bottom: 1em;" class="text-break" placeholder="PG máx.">
+                    <input type="number" style="margin-bottom: 1em;" class="text-break" placeholder="Iniciativa">
+                    <input type="text" style="margin-bottom: 1em;" class="text-break" placeholder="Notas">
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary">Guardar</button>

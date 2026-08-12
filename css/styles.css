@@ -44,3 +44,18 @@
     padding: 0 1em 0 1em;
     text-decoration: none;
 }
+
+.modalCombate {
+    display: grid;
+    grid-template-columns: 25% 10% 10% 10% 45%;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
