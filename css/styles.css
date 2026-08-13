@@ -27,7 +27,6 @@
 
 }
 
-
 .container-sm img {
     display: flex;
     max-width: 100%;
@@ -45,10 +44,37 @@
     text-decoration: none;
 }
 
-.modalCombate {
-    display: grid;
-    grid-template-columns: 25% 10% 10% 10% 45%;
+/* ---------------Ventanas de modales---------------- */ 
+
+.pjCombate {
+    display: grid;  
+    grid-template-columns: 25% 8% 12% 15% 35% 5%;
+    border-style: solid;
+    border-color: rgb(0, 143, 48);
+    border-radius: 4px;
+    border-width: 2px;
+    margin: 3px 0;
 }
+
+.tesoro {
+    display: grid;  
+    border-style: solid;
+    border-color: rgb(0, 143, 48);
+    border-radius: 4px;
+    border-width: 2px;
+    margin: 3px 0;
+}
+
+.npc {
+    display: grid;  
+    border-style: solid;
+    border-color: rgb(55, 58, 105);
+    border-radius: 4px;
+    border-width: 2px;
+    margin: 3px 0;
+}
+
+/* ----------Remueve spinner de input number------------------ */
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
@@ -58,4 +84,32 @@ input[type="number"]::-webkit-outer-spin-button {
 
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+/* -------------DRAG AND DROP------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.container .item {
+    display: flex;
+    color: #fff;
+    margin: .3rem 0;
+    align-items: center;
+    border-radius: .3rem;
+    padding: .5rem .5rem;
+    background-color: #1c015e;
+    justify-content: space-between;
+}
+
+.container .item span {
+    width: 2rem;
+    height: 2rem;
+    cursor: move;
+    display: grid;
+    place-items: center;
+}
+
+.container .item span:hover,
+.container .item.drag {
+    background-color: #2e0e7c;
 }

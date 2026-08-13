@@ -1,45 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- --------------------- Created By InCoder --------------------- -->
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <title>Drag & drop or sortable List - InCoder</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
+
 <body>
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <textarea type="text" style="field-sizing: content; width: 100%; margin-bottom: 1em; min-height: 50px; max-height: 200px;" class="text-break" placeholder="Descripción"></textarea>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+    <div class="container">
+        <div class="title">
+            <h3>Drag & drop or sortable List</h3>
+        </div>
+        <div class="items">
+            <div class="item">
+                <p>Dragable Item 1</p>
+                <span class="moveHand"><i class="fa-solid fa-grip-lines"></i></span>
+            </div>
+            <div class="item">
+                <p>Dragable Item 2</p>
+                <span class="moveHand"><i class="fa-solid fa-grip-lines"></i></span>
+            </div>
+            <div class="item">
+                <p>Dragable Item 3</p>
+                <input type="text" placeholder="heheh">
+                <span class="moveHand"><i class="fa-solid fa-grip-lines"></i></span>
+            </div>
+            <div class="item">
+                <p>Dragable Item 4</p>
+                <span class="moveHand"><i class="fa-solid fa-grip-lines"></i></span>
+            </div>
+            <div class="item">
+                <p>Dragable Item 5</p>
+                <span class="moveHand"><i class="fa-solid fa-grip-lines"></i></span>
+            </div>
+            <div class="item">
+                <p>Dragable Item 6</p>
+                <span class="moveHand"><i class="fa-solid fa-grip-lines"></i></span>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script>
+        let items = document.querySelector('.items')
+
+        new Sortable(items, {
+            animation: 200,
+            handle: '.moveHand',
+            ghostClass: 'drag'
+        });
+    </script>
 </body>
+
 </html>

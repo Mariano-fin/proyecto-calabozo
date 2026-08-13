@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 
 <body class=>
@@ -62,6 +63,9 @@
             <p><i>Arrastre un ícono hasta el punto deseado en el mapa. Luego, presione el ícono para agregar
                     información</i></p>
         </div>
+
+        <!-- -------------------------------BARRA DE HERRAMIENTAS ------------------------>
+
         <div style="display: flex; justify-content: space-evenly; margin-bottom: 2rem;">
             <div class="toolbar">
                 <span><a href="" class="icon" data-bs-toggle="modal" data-bs-target="#modalCombate">⚔️</a></span>
@@ -84,7 +88,7 @@
         </div>
     </main>
 
-    <!-- MODALES---------------------------------- -->
+    <!--------------------- MODALES------------------------------------------------------------- -->
 
     <!-- MODAL NOTAS------------------------------------>
 
@@ -119,15 +123,39 @@
                     <h5 class="modal-title">Combate</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body items">
                     <input type="text" style="width: 100%; margin-bottom: 1em;" placeholder="Título del Combate">
-                    <div class="modalCombate">
-                    <input type="text" style="min-width: 10px; margin-bottom: 1em;" placeholder="Personaje">
-                    <input type="number" style="margin-bottom: 1em;" class="text-break" placeholder="PG actuales">
-                    <input type="number" style="margin-bottom: 1em;" class="text-break" placeholder="PG máx.">
-                    <input type="number" style="margin-bottom: 1em;" class="text-break" placeholder="Iniciativa">
-                    <input type="text" style="margin-bottom: 1em;" class="text-break" placeholder="Notas">
+                    <div class="pjCombate item">
+                        <input type="text" style="margin-right: 3px;" placeholder="Nombre">
+                        <input type="number" style="margin-right: 3px;" placeholder="🩶">
+                        <input type="number" style="margin-right: 3px;" placeholder="Turno">
+                        <input type="text" style="margin-right: 3px;" placeholder="Estado">
+                        <input type="text" style="margin-right: 3px;" placeholder="Notas">
+                        <button type="button" class="btn btn-outline-danger">X</button>
+                        <span class="moveHand"><i class="fa-solid fa-grip-lines"></i></span>
                     </div>
+                    <div class="pjCombate item">
+                        <input type="text" style="margin-right: 3px;" placeholder="Nombre">
+                        <input type="number" style="margin-right: 3px;" placeholder="🩶">
+                        <input type="number" style="margin-right: 3px;" placeholder="Turno">
+                        <input type="text" style="margin-right: 3px;" placeholder="Estado">
+                        <input type="text" style="margin-right: 3px;" placeholder="Notas">
+                        <button type="button" class="btn btn-outline-danger">X</button>
+                        <span class="moveHand"><i class="fa-solid fa-grip-lines"></i></span>
+                    </div>
+                    <div class="pjCombate item">
+                        <input type="text" style="margin-right: 3px;" placeholder="Nombre">
+                        <input type="number" style="margin-right: 3px;" placeholder="🩶">
+                        <input type="number" style="margin-right: 3px;" placeholder="Turno">
+                        <input type="text" style="margin-right: 3px;" placeholder="Estado">
+                        <input type="text" style="margin-right: 3px;" placeholder="Notas">
+                        <button type="button" class="btn btn-outline-danger">X</button>
+                        <span class="moveHand"><i class="fa-solid fa-grip-lines"></i></span>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-outline-success">+ Personaje</button>
+                    </div>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary">Guardar</button>
@@ -138,24 +166,146 @@
     </div>
 
     <!-- MODAL LOOT------------------------------------>
+    <div class="modal fade" id="modalLoot" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tesoro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="tesoro">
+                        <div style="width: 100%;">
+                            <input type="text" style="width: 75%; margin-bottom: 1px;" class="text-break"
+                                placeholder="Tesoro">
+                            <input type="text" style="width: 18%" ; class="text-break" placeholder="Valor">
+                            <button type="button" style="width: 5%;" class="btn btn-outline-danger">X</button>
+                        </div>
+                        <div>
+                            <textarea type="text"
+                                style="field-sizing: content; width: 100%; margin-bottom: 1px; min-height: 50px; max-height: 200px;"
+                                class="text-break" placeholder="Descripción"></textarea>
+                        </div>
+                    </div>
+                    <div class="tesoro">
+                        <div style="width: 100%;">
+                            <input type="text" style="width: 75%; margin-bottom: 1px;" class="text-break"
+                                placeholder="Tesoro">
+                            <input type="text" style="width: 18%" ; class="text-break" placeholder="Valor">
+                            <button type="button" style="width: 5%;" class="btn btn-outline-danger">X</button>
+                        </div>
+                        <div>
+                            <textarea type="text"
+                                style="field-sizing: content; width: 100%; margin-bottom: 1px; min-height: 50px; max-height: 200px;"
+                                class="text-break" placeholder="Descripción"></textarea>
+                        </div>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-outline-success">+ Tesoro</button>
+                    </div>
 
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                    <button type="button" class="btn btn-danger">🗑️</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- MODAL NPCs------------------------------------>
+
+    <div class="modal fade" id="modalNPC" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">NPC</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="npc">
+                        <div style="width: 100%; grid-template-columns: 70% 30% 10%;">
+                            <input type="text" style="width: 60%; margin-bottom: 1px;" class="text-break form-control"
+                                placeholder="Nombre">
+                            <input type="text" style="width: 10%" ; class="text-break form-control" placeholder="🩶">
+                            <button type="button" style="width: 7%;" class="btn btn-outline-danger">X</button>
+                        </div>
+                        <div>
+                            <textarea type="text"
+                                style="field-sizing: content; width: 100%; margin-bottom: 1px; min-height: 50px; max-height: 200px;"
+                                class="text-break form-control" placeholder="Descripción"></textarea>
+                        </div>
+                    </div>
+                    <div class="npc">
+                        <div style="width: 100%;">
+                            <input type="text" style="width: 75%; margin-bottom: 1px;" class="text-break"
+                                placeholder="Nombre">
+                            <input type="text" style="width: 11%" ; class="text-break" placeholder="🩶">
+                            <button type="button" style="width: 8%;" class="btn btn-outline-danger">X</button>
+                        </div>
+                        <div>
+                            <textarea type="text"
+                                style="field-sizing: content; width: 100%; margin-bottom: 1px; min-height: 50px; max-height: 200px;"
+                                class="text-break" placeholder="Descripción"></textarea>
+                        </div>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-outline-success">+ Personaje</button>
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                    <button type="button" class="btn btn-danger">🗑️</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- MODAL TRAMPAS------------------------------------>
 
+    <div class="modal fade" id="modalTrampa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Trampa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="trampa">
+                        <div style="width: 100%;">
+                            <input type="text" style="width: 64%; margin-bottom: 1px;" class="text-break"
+                                placeholder="Nombre">
+                            <input type="text" style="width: 35%" ; class="text-break" placeholder="Gatillante">
+                        </div>
+                        <div>
+                            <textarea type="text"
+                                style="field-sizing: content; width: 100%; margin-bottom: 1px; min-height: 50px; max-height: 200px;"
+                                class="text-break" placeholder="Descripción"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                    <button type="button" class="btn btn-danger">🗑️</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-    <script src="./js/index.js"></script>
+    <script src="js/index.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
 </body>
 
 </html>
