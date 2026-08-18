@@ -28,6 +28,8 @@ input {
     justify-content: center;
 }
 
+/* ==================Contenedor del Mapa<====================== */
+
 .map-frame {
     border-style: groove;
     border-color: rgb(21, 102, 75);
@@ -42,6 +44,8 @@ input {
     max-width: 100%;
     height: auto;
 }
+
+/* ==================Toolbar e íconos====================== */
 
 .toolbar {
     border-style: solid;
@@ -67,7 +71,6 @@ input {
 
 .tesoro {
     display: grid;  
-
     border-radius: 4px;
     border-width: 2px;
     margin: 3px 0;
@@ -75,7 +78,6 @@ input {
 
 .npc {
     display: grid;  
-    
     border-radius: 5px;
     border-width: 2px;
     margin: 3px 0 10px 0;

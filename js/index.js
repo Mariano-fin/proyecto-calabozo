@@ -10,5 +10,14 @@ new Sortable(items, {
 
 
 
-/* -----------Selector de items------------- */
+/* -----------Drag and Drop------------- */
+
+mapZone.addEventListener("dragover", (ev) => {
+  ev.preventDefault();});
+
+mapZone.addEventListener("drop", (ev) => {
+  ev.preventDefault();
+  const data = ev.dataTransfer.getData("text/plain");
+  ev.mapZone.append(data);
+});
 
